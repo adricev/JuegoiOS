@@ -4,45 +4,50 @@
 //
 //  Created by Adrian  on 26/10/23.
 //
-
 import UIKit
 
 class gameController: UIViewController {
-    
-    @IBOutlet var imageViews: [UIImageView]!
-    
+
+    @IBOutlet weak var imageView: UIImageView!
+
     // Nombres de las imágenes en tu proyecto
-    let imageNames = ["PorscheAzul", "PorscheAmarillo", "PorscheRojo", "PorscheVerde", "PorscheBlanco", "PorscheNavy"]
-    
+    let imageNames = ["image1", "image2", "image3", "image4", "image5", "image6"]
+
     var shuffledImageNames: [String] = []
-    
+    var imageIndex = 0
+    var timer: Timer?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Baraja los nombres de las imágenes aleatoriamente
         shuffledImageNames = imageNames.shuffled()
         // Inicialmente, asigna imágenes aleatorias
-        assignRandomImages()
+        assignRandomImagesWithTimer()
     }
-    
+
     @IBAction func jugarButtonTapped(_ sender: UIButton) {
         // Baraja nuevamente las imágenes para mostrar diferentes combinaciones
+        print(shuffledImageNames)
         shuffledImageNames = imageNames.shuffled()
-        assignRandomImages()
+        imageIndex = 0
+        assignRandomImagesWithTimer()
     }
-    
-    func assignRandomImages() {
-        guard imageViews.count >= shuffledImageNames.count else {
-            // Manejar el caso en el que haya menos ImageViews que imágenes disponibles
-            return
-        }
-        
-        for (index, imageView) in imageViews.enumerated() {
-            if index < shuffledImageNames.count {
-                // Asigna una imagen aleatoria a cada ImageView
-                if let image = UIImage(named: shuffledImageNames[index]) {
-                    imageView.image = image
-                }
-            }
+
+    func assignRandomImagesWithTimer() {
+        // Detén el temporizador si ya está en ejecución
+        timer?.invalidate()
+
+        // Inicia un temporizador que cambia la imagen cada 2 segundos
+        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateImage), userInfo: nil, repeats: true)
+    }
+
+    @objc func updateImage() {
+        if imageIndex < shuffledImageNames.count {
+            imageView.image = UIImage(named: shuffledImageNames[imageIndex])
+            imageIndex += 1
+        } else {
+            // Todas las imágenes se han mostrado, detén el temporizador
+            timer?.invalidate()
         }
     }
 }
