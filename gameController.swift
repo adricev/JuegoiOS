@@ -31,8 +31,18 @@ class gameController: UIViewController {
         shuffledImageNames = imageNames.shuffled()
         imageIndex = 0
         assignRandomImagesWithTimer()
+        
+        // Pasa shuffledImageNames a la nueva vista
+
+        
+        performSegue(withIdentifier: "SegueResultados", sender: nil)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let Resultados = segue.destination as! ResultadosController
+        Resultados.shuffledImageNames = shuffledImageNames
+    }
+    
     func assignRandomImagesWithTimer() {
         // Detén el temporizador si ya está en ejecución
         timer?.invalidate()
@@ -51,3 +61,4 @@ class gameController: UIViewController {
         }
     }
 }
+

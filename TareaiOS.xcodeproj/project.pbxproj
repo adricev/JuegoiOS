@@ -14,7 +14,7 @@
 		3A5FAE862ADFBF1A00467742 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A5FAE842ADFBF1A00467742 /* Main.storyboard */; };
 		3A5FAE8B2ADFBF1E00467742 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A5FAE892ADFBF1E00467742 /* LaunchScreen.storyboard */; };
 		3AA68FC62AFA68FC00864C3C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA68FC52AFA68FC00864C3C /* Media.xcassets */; };
-		3AA68FC82AFAD39600864C3C /* Resultados.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA68FC72AFAD39600864C3C /* Resultados.swift */; };
+		3AA68FC82AFAD39600864C3C /* ResultadosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA68FC72AFAD39600864C3C /* ResultadosController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		3A5FAE8A2ADFBF1E00467742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A5FAE8C2ADFBF1E00467742 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AA68FC52AFA68FC00864C3C /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		3AA68FC72AFAD39600864C3C /* Resultados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resultados.swift; sourceTree = "<group>"; };
+		3AA68FC72AFAD39600864C3C /* ResultadosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultadosController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,7 @@
 				3A5FAE7E2ADFBF1A00467742 /* AppDelegate.swift */,
 				3A5FAE802ADFBF1A00467742 /* SceneDelegate.swift */,
 				3A5FAE822ADFBF1A00467742 /* ViewController.swift */,
-				3AA68FC72AFAD39600864C3C /* Resultados.swift */,
+				3AA68FC72AFAD39600864C3C /* ResultadosController.swift */,
 				3A5FAE842ADFBF1A00467742 /* Main.storyboard */,
 				3A5FAE892ADFBF1E00467742 /* LaunchScreen.storyboard */,
 				3A5FAE8C2ADFBF1E00467742 /* Info.plist */,
@@ -146,7 +146,7 @@
 			files = (
 				3A5FAE832ADFBF1A00467742 /* ViewController.swift in Sources */,
 				3A5DBF802AEA578200E8433B /* gameController.swift in Sources */,
-				3AA68FC82AFAD39600864C3C /* Resultados.swift in Sources */,
+				3AA68FC82AFAD39600864C3C /* ResultadosController.swift in Sources */,
 				3A5FAE7F2ADFBF1A00467742 /* AppDelegate.swift in Sources */,
 				3A5FAE812ADFBF1A00467742 /* SceneDelegate.swift in Sources */,
 			);
